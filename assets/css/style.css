@@ -1,0 +1,344 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.eot');
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),
+    url('../fonts/Gilroy-Regular.woff') format('woff'),
+    url('../fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html body {
+    font-family: "Gilroy", sans-serif;
+    font-size: 16px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.clear-both {
+    clear: both;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 1.5em 0;
+}
+
+li.active a {
+    color: black;
+    font-weight: 600;
+}
+
+.logo {
+    max-height: 50px;
+    margin: auto 2em;
+    vertical-align: middle;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+form .col {
+    padding: 0 20px;
+}
+
+.form-group {
+    width: 100%;
+    position: relative;
+    margin: 50px 0;
+}
+
+input, select, textarea {
+    outline: none;
+}
+
+.country {
+    width: 25%;
+    float: left;
+}
+
+.phone {
+    width: 65%;
+    float: right;
+}
+
+.form-group label:not(.label-full) {
+    position: absolute;
+    color: #B3B3B3;
+    top: 0;
+    transition: 0.35s all;
+}
+
+.input-helper {
+    color: #B3B3B3;
+}
+
+.form-group.bio label {
+    position: relative;
+}
+
+.form-group.active label:not(.label-full) {
+    top: -65%;
+    font-size: 0.9em;
+}
+
+.form-group label.label-full input {
+    width: auto;
+}
+
+.form-group input, .form-group select , .form-group textarea {
+    width: 100%;
+    max-width: 100%;
+    max-height: 250px;
+    border: none;
+    border-bottom: 1px solid #D1D1D1;
+    font-size: 1em;
+    padding: 5px 0;
+}
+
+.birthday:after {
+    content: url("../img/calendar.svg");
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.custom_checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.custom_checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #777777;
+    border-radius: 5px;
+}
+
+.custom_checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.custom_checkbox input:checked ~ .checkmark {
+    background-color: #DAE9BC;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom_checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.custom_checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+button[type="submit"], .button-like {
+    cursor: pointer;
+    background: #eee;
+    border: none;
+    padding: 15px 25px;
+    display: inline-block;
+}
+
+button[type="submit"]:active, .button-like:active {
+    transform: scale(0.95);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+table th, table td {
+    border: 1px solid orange;
+}
+
+table th {
+    color: white;
+    background-color: #818B8A;
+}
+
+/* Slider styles */
+
+a.slider {
+    padding: 10px 25px;
+    background-color: #4CA74C;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+#mySlider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.singleSlide {
+    background-size: cover;
+    height: 300px;
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    top: 0px;
+}
+
+#sliderNav {
+    position: relative;
+    top: -175px;
+}
+
+#sliderNav:hover { cursor: pointer;	}
+#sliderPrev {
+    position: relative;
+    float: left;
+    left: 50px;
+}
+
+#sliderNext {
+    position: relative;
+    float: right;
+    right: 50px;
+}
+@-webkit-keyframes slideIn {
+    100% { left: 0; }
+}
+
+@keyframes slideIn {
+    100% { left: 0; }
+}
+
+.slideInRight {
+    left: -100%;
+    -webkit-animation: slideIn 1s forwards;
+    animation: slideIn 1s forwards;
+}
+
+.slideInLeft {
+    left: 100%;
+    -webkit-animation: slideIn 1s forwards;
+    animation: slideIn 1s forwards;
+}
+
+@-webkit-keyframes slideOutLeft {
+    100% { left: -100%; }
+}
+
+@keyframes slideOutLeft {
+    100% { left: -100%; }
+}
+
+.slideOutLeft {
+    -webkit-animation: slideOutLeft 1s forwards;
+    animation: slideOutLeft 1s forwards;
+}
+
+@-webkit-keyframes slideOutRight {
+    100% { left: 100%; }
+}
+
+@keyframes slideOutRight {
+    100% { left: 100%; }
+}
+
+.slideOutRight {
+    -webkit-animation: slideOutRight 1s forwards;
+    animation: slideOutRight 1s forwards;
+}
+
+#sliderControls {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+/* Paint style */
+
+#draw, #canvas {
+    border: 1px solid black;
+}
+
+.canvasControls {
+    width: 490px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Paint2 style */

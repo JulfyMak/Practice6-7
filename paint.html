@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test_Website</title>
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="header">
+<img class="logo" src="assets/img/logo.png" alt="logo">
+</header>
+
+<div class="container">
+    <main class="center column">
+        <article>
+            <h1>Paint</h1>
+            <canvas id="draw" width="490" height="220">Ваш браузер не поддерживает технологию canvas</canvas>
+            <div class="canvasControls">
+                <div class="button-like" id="clear">Clear</div>
+                <input type="color" id="color">
+                <div class="range">
+                    <input type="range" value="5" min="1" max="10" id="size"> <span id="sizeIndicator">5</span>
+                </div>
+            </div>
+
+
+            <h2>Paint2 (different size and color works simultaneously)</h2>
+            <div class="playground">
+                <canvas id='canvas' width="490" height="220">Ваш браузер не поддерживает технологию canvas</canvas>
+                <div class="canvasControls">
+                    <div class="button-like" id="clear2">Clear</div>
+                    <input type="color" id="color2">
+                    <div class="range2">
+                        <input type="range" value="5" min="1" max="10" id="size2"> <span id="sizeIndicator2">5</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <nav class="left column">
+        <h3>Left heading</h3>
+        <ul>
+            <li><a href="index.html">Home page</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="slider.html">Slider</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li class="active"><a href="paint.html">Paint</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="right column">
+        <h3>Right heading</h3>
+        <p></p>
+    </div>
+</div>
+
+<div class="footer-wrapper">
+    <footer class="footer">
+<img class="logo" src="assets/img/logo.png" alt="logo">
+    <p>© 2020</p>
+    </footer>
+</div>
+
+<script src="assets/js/paint.js"></script>
+<script src="assets/js/paint2.js"></script>
+</body>
+</html>
